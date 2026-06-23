@@ -1,16 +1,15 @@
-import { Link, useLocation } from "react-router-dom";
-import { Mail, Globe } from "lucide-react";
+import { Mail } from "lucide-react";
 import { personal } from "../data/portfolio";
 
 const footerLinks = [
-  { label: "Home", path: "/" },
-  { label: "Projects", path: "/projects" },
-  { label: "About", path: "/about" },
-  { label: "Contact", path: "/contact" },
+  { label: "Home", path: "#home" },
+  { label: "Projects", path: "#projects" },
+  { label: "Skills", path: "#skills" },
+  { label: "About", path: "#about" },
+  { label: "Contact", path: "#contact" },
 ];
 
 export default function Footer() {
-  const location = useLocation();
   const year = new Date().getFullYear();
 
   return (
@@ -19,17 +18,13 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8 mb-16">
           <nav className="flex flex-wrap gap-6 sm:gap-10">
             {footerLinks.map(({ label, path }) => (
-              <Link
+              <a
                 key={path}
-                to={path}
-                className={`text-sm font-bold transition-colors ${
-                  location.pathname === path
-                    ? "text-purple-600"
-                    : "text-gray-700 hover:text-purple-600"
-                }`}
+                href={path}
+                className="text-sm font-bold text-gray-700 hover:text-purple-600 transition-colors"
               >
                 {label}
-              </Link>
+              </a>
             ))}
           </nav>
 

@@ -4,10 +4,10 @@ import { skills } from "../data/portfolio";
 
 export default function Skills() {
   return (
-    <section className="max-w-6xl mx-auto px-6 py-20 bg-[#F9F9F9]">
+    <section id="skills" className="max-w-6xl mx-auto px-6 py-20 bg-[#F9F9F9]">
       <SectionHeading>Skills</SectionHeading>
 
-      <div className="grid grid-cols-2  lg:grid-cols-5 gap-6">
+      <div className="grid grid-cols-2  lg:grid-cols-5 gap-10">
         {skills.map(({ category, items }) => (
           <div key={category}>
             <h3 className="text-base font-bold text-gray-900 mb-3">{category}</h3>

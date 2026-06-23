@@ -13,7 +13,7 @@ export const personal = {
   tagline:
     "Passionate about building scalable applications, crafting intuitive user experiences, and solving real-world problems through technology.",
   profileImage: "/images/profile.png",
-  resume: "/resume/Khushi_Kukreja_Resume.pdf",
+  resume: "/resume/Khushi_Kukreja_resume.pdf",
 };
 
 export const experience = [
@@ -74,14 +74,9 @@ export const skills = [
       "Node.js",
       "Express.js",
       "REST APIs",
-      "Socket.IO",
-    ],
-  },
-  {
-    category: "Databases",
-    items: [
-      "MongoDB",
+       "MongoDB",
       "MySQL",
+      "Socket.IO",
     ],
   },
   {

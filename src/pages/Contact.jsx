@@ -4,7 +4,7 @@ import { personal } from "../data/portfolio";
 
 export default function Contact() {
   return (
-    <main className="min-h-screen bg-[#F9F9F9]">
+    <section id="contact" className="bg-[#F9F9F9]">
       <section className="max-w-6xl mx-auto px-6 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div>
@@ -39,20 +39,67 @@ export default function Contact() {
             </ul>
           </div>
 
-            <div className="flex justify-center lg:justify-end">
-          <div className="relative">
-            <div className="absolute inset-0 rounded-full border-2 border-dashed border-purple-200 scale-110" />
-            <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden">
-              <img
-                src={personal.profileImage}
-                alt={personal.name}
-                className="w-full h-full object-cover object-top scale-110"
+          <div className="bg-white rounded-2xl p-6 shadow-sm">
+            <form
+              action="https://formspree.io/f/xaqgnony"
+              method="POST"
+              className="space-y-4"
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="New Portfolio Contact Form Submission"
               />
-            </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  placeholder="Enter your name"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:border-purple-600"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="Enter your email"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:border-purple-600"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Message
+                </label>
+                <textarea
+                  name="message"
+                  rows={5}
+                  required
+                  placeholder="Write your message..."
+                  className="w-full px-4 py-3 border border-gray-200 rounded-xl resize-none focus:outline-none focus:border-purple-600"
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-purple-600 text-white py-3 rounded-xl font-medium hover:bg-purple-700 transition-colors"
+              >
+                Send Message
+              </button>
+            </form>
           </div>
         </div>
-        </div>
       </section>
-    </main>
+    </section>
   );
 }

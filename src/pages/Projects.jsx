@@ -1,4 +1,4 @@
-import { ArrowUpRight, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import SectionHeading from "../components/SectionHeading";
 import PurpleWave from "../components/PurpleWave";
 import { projects } from "../data/portfolio";
@@ -23,17 +23,6 @@ function ProjectCard({ title, description, github, live, backend, image }) {
       <div className="mt-6">
         <div className="flex items-center gap-3 flex-wrap">
           <h3 className="text-2xl font-bold text-gray-900">{title}</h3>
-          {/* {live && (
-            <a
-              href={live}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center text-white hover:bg-purple-700 transition-colors shrink-0"
-              aria-label={`View ${title} live demo`}
-            >
-              <ArrowUpRight size={16} />
-            </a>
-          )} */}
         </div>
 
         <p className="text-gray-500 mt-2 max-w-md leading-relaxed">{description}</p>
@@ -83,7 +72,7 @@ function ProjectCard({ title, description, github, live, backend, image }) {
 
 export default function Projects() {
   return (
-    <main className="min-h-screen bg-[#F9F9F9]">
+    <section id="projects" className="bg-[#F9F9F9]">
       <section className="max-w-6xl mx-auto px-6 py-20">
         <SectionHeading>Projects</SectionHeading>
 
@@ -93,6 +82,6 @@ export default function Projects() {
           ))}
         </div>
       </section>
-    </main>
+    </section>
   );
 }
