@@ -37,10 +37,11 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <a
             href={personal.resume}
-            download="Khushi_Kukreja_Resume.pdf"
-            className="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-purple-600 border border-purple-600 rounded-xl hover:bg-purple-50 transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:inline-flex items-center gap-2 px-4 py-1 text-sm font-semibold text-purple-600 border border-purple-600 rounded-md hover:bg-purple-50 transition-colors"
           >
-            <Download size={16} />
+            {/* <Download size={16} /> */}
             Resume
           </a>
           <a
@@ -75,7 +76,8 @@ export default function Navbar() {
           ))}
           <a
             href={personal.resume}
-            download="Khushi_Kukreja_resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setOpen(false)}
             className="flex items-center gap-2 py-3 text-base font-semibold text-purple-600"
           >
